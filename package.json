@@ -1,0 +1,16 @@
+{
+  "name": "professional-backend-project-with-hitesh-choudhary",
+  "version": "1.0.0",
+  "description": "This is the professinall, Industry starndard course by Hitesh choudhary. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "mongoose"
+  ],
+  "author": "https://github.com/tanvir1017",
+  "license": "ISC"
+}
