@@ -2,6 +2,7 @@ import "dotenv/config"; // required dotenv for production ready
 import express from "express"; // importing or required express from package
 const app = express(); // wrap the imported express by app variable
 
+// added new .env and ignore it to push on public
 const PORT = process.env.PORT || 3002; // stored secure port to PORT variable from .env file and if it is not available then it will run the the app into 3002 port
 
 // The global route will send hello world when it will hit by '/'
