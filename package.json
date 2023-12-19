@@ -2,9 +2,10 @@
   "name": "professional-backend-project-with-hitesh-choudhary",
   "version": "1.0.0",
   "description": "This is the professinall, Industry starndard course by Hitesh choudhary. ",
-  "main": "app.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javascript",
@@ -12,5 +13,8 @@
     "mongoose"
   ],
   "author": "https://github.com/tanvir1017",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
