@@ -4,7 +4,11 @@
 
 # What we learned so far from this series?
 
-> What's the difference between `dev-dependency` and `dependency`?
+> ## What is MVC Pattern ?
+>
+> ### MVC stand for `Module-View-Controller`, its a pattern for software design.Its follow for emphasizes to have actual overview about software business logic & display.This "separation of concerns" provides for a better division of labor and improved maintenance.
+
+### What's the difference between `dev-dependency` and `dependency`?
 
 ### devDependency?
 
