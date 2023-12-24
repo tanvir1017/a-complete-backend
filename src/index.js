@@ -1,5 +1,10 @@
 import dotenv from "dotenv";
+import express from "express";
 import connectDb from "./db/index.js";
+
+const app = express();
+
+const PORT = process.env.PORT || 8000;
 
 // But there is a problem about dotenv after importing like this above ↖️. We have to configure it
 dotenv.config({ path: "./env" }); // Now are telling dotenv file to configure our env file as secret env file.
@@ -8,7 +13,22 @@ dotenv.config({ path: "./env" }); // Now are telling dotenv file to configure ou
 // Second approach (Standard)
 
 // Write the connectionInstance file into a separate place, then import to this file
-connectDb();
+connectDb()
+  .then(() => {
+    //  On running an event we are showing message to the console
+    app.on("error", (error) => {
+      console.log("Data base is not able to connect", error);
+      throw error;
+    });
+
+    // LISTENING from which port are running the server
+    app.listen(PORT, () => {
+      console.log("server is running on Port ", PORT);
+    });
+  })
+  .catch((err) => {
+    console.log("MONGO db connections failed !! ", err);
+  });
 
 /* 
 
