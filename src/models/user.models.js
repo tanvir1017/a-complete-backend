@@ -52,7 +52,7 @@ const userSchema = new Schema(
 // Something to do before saving user data to db
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next(); // checking if password is not modifying then do not get into deeper, return from this line
-  this.password = bcrypt.hash(this.password, 10); // If password is modifying then hash it
+  this.password = await bcrypt.hash(this.password, 10); // If password is modifying then hash it
   next();
 });
 
